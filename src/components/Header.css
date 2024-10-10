@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap");
+.navbar-brand {
+  font-family: "Mr De Haviland", cursive;
+}
+.navbar{
+  box-shadow: 0px -10px 12px 10px rgba(0, 0, 0, 0.135);
+}
+
+.btn_show {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--icon_color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+.btn_show {
+  padding: 5px;
+  font-size: 28px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  transition: all 0.5s ease-in-out;
+}
+.btn_show:hover {
+  color: var(--link_color);
+  transform: rotate(360deg) scale(1.2);
+}
+.overflow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-100%);
+  z-index: 5;
+  width: 100%;
+  height: calc(100vh - 56px);
+  background-color: var(--body_bg);
+  color: var(--body_color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainUl {
+  width: 100%;
+  margin-right: 20px;
+}
+.mainUl ul {
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+.navbar ul li{
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+  
+}
+.navbar ul li::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1.5px;
+  background-color: #dc3a3a;
+  transition: all 0.5s ease-in-out;
+}
+.navbar ul li:hover::after{
+  width: 100%;
+}
+.navbar ul li:hover{
+  transform: scale(1.1);
+}
+
+.overflow ul {
+  height: 80%;
+  flex-direction: column;
+  padding: 20px 0;
+  font-size: 2.5rem;
+  letter-spacing: 0.3rem;
+}
+
+.overflow.overFlow {
+  top: 56px;
+  transform: translateY(0);
+  animation: upToDown 3s 0.4s ease-in-out 1;
+  opacity: 1;
+}
+
+@keyframes upToDown {
+  10% {
+    transform: translateY(-30%);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .overflow ul {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    height: 300px;
+  }
+}

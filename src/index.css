@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;300;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Marcellus&family=Raleway:wght@100;300;400;600;800&family=Tajawal:wght@200;300;400;500;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body_bg: #0d0d0d;
+  --body_color: white;
+  --link_color: navy;
+  --btnOne_bg: white;
+  --btnOne_color: black;
+  --btnTwo_bg: black;
+  --btnTwo_color: white;
+  --icon_bg: transparent;
+  --icon_m: 5px;
+}
+
+[data-theme="light"] {
+  --body_bg: white;
+  --body_color: black;
+  --btnOne_bg: black;
+  --btnOne_color: white;
+  --btnTwo_bg: white;
+  --btnTwo_color: black;
+  --icon_bg: black;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+main {
+  background-color: var(--body_bg);
+  color: var(--body_color);
+  font-family: "lato", sans-serif;
+  font-weight: bold;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--body_bg);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(68, 68, 68);
+  border-radius: 4px;
+}
+
+@media (max-width: 767px) {
+  body::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div {
+  font-family: "Raleway", sans-serif;
+}

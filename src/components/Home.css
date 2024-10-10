@@ -1,0 +1,136 @@
+.my-container {
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+}
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2em;
+  margin-bottom: 30px;
+}
+.leftContent p{
+  font-weight: 600;
+  line-height: 1.8em;
+}
+.leftContent .typeWriter{
+  font-family: "Raleway";
+   font-weight: 600;
+}
+.btn_one,
+.btn_two,
+.btn_lTwo,
+.btn_lOne {
+  border-radius: 0;
+  padding: 5px 20px;
+  border: solid white 2px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+.btn_one,
+.btn_lOne {
+  background-color: var(--btnOne_bg);
+  color: var(--btnOne_color);
+}
+.btn_two,
+.btn_lTwo {
+  background-color: var(--btnTwo_bg);
+  color: var(--btnTwo_color);
+  border: solid var(--btnOne_bg) 2px;
+}
+
+.btn_one:hover,
+.btn_lOne:hover {
+  background-color: var(--btnTwo_bg);
+  color: var(--btnTwo_color);
+  border: solid var(--btnOne_bg) 2px;
+}
+
+.btn_two:hover,
+.btn_lTwo:hover {
+  background-color: var(--btnOne_bg);
+  color: var(--btnOne_color);
+  border: solid var(--btnOne_color) 2px;
+}
+
+
+
+
+.rightContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photoCon {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.photoCon img {
+  width: 350px;
+  height: 350px;
+}
+
+@media (max-width: 1025px) {
+
+  .my-container {
+    height: 100%;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0;
+  }
+  .rightContent {
+    order: 1;
+  }
+  .leftContent {
+    order: 2;
+  }
+  .my-container div:last-child {
+    order: 3;
+  }
+  .photoCon {
+    width: 250px;
+    height: 250px;
+  }
+  .photoCon img {
+    width: 250px;
+    height: 250px;
+  }
+  
+}
+
+@media (max-width : 767px) {
+  .my-container{
+    padding: 0 20px;
+    font-size: 14px;
+    gap: 40px;
+
+  }
+  .my-container button{
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .leftContent {
+    gap: 2em;
+  }
+  .leftContent p{
+    line-height: 1.8em;
+  }
+  .leftContent .typeWriter span{
+     font-size: 18px;
+  }
+}
+
+

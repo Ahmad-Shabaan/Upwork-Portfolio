@@ -1,0 +1,94 @@
+.skillsCon{
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+    margin: 80px 0;
+    justify-content: center;
+}
+.skillsCon .skillImgCom{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.skillsCon .skillImgCom img{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.skillsCon .skillImgCom:hover img{
+    transform: scale(1.4) translateY(-130%) rotate(360deg);
+}
+
+.skillsCon .skillImgCom .progress{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.skillsCon .skillImgCom .percentage{
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    position: relative;
+    bottom: -100%;
+}
+.skillsCon .skillImgCom:hover .percentage{
+    opacity: 1;
+    bottom: 0;
+}
+
+/* Define the base styles for the component */
+.YourComponent {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+  
+  /* Define the animation styles for entering the component */
+  .YourComponent-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  
+  /* Define the animation styles for entering the active component */
+  .YourComponent-enter-active {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  }
+
+
+  .slide-enter {
+    transform: translateX(100%);
+  }
+  
+  .slide-enter-active {
+    transform: translateX(0%);
+    transition: transform 500ms ease-in-out;
+  }
+  
+  .slide-leave {
+    transform: translateX(0%);
+  }
+  
+  .slide-leave-active {
+    transform: translateX(-100%);
+    transition: transform 500ms ease-in-out;
+  }
